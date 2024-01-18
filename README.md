@@ -43,3 +43,106 @@ const newState = counterReducer(initialState, { type: 'INCREMENT' });
 console.log(newState); // { count: 1 }
 
 ```
+<br>
+
+<br>
+
+what is Redux State Slice?
+<br>
+A Redux State Slice is a concept introduced by the @reduxjs/toolkit library to help organize and manage slices of your application state in a more modular way. 
+
+<br>
+<br>
+
+```javascript
+
+import { createSlice } from '@reduxjs/toolkit';
+
+// Initial state for the counter slice
+const initialState = {
+  value: 0,
+};
+
+// Create a counter slice using createSlice
+const counterSlice = createSlice({
+  name: 'counter',  // Name of the slice
+  initialState,     // Initial state
+  reducers: {
+    increment: (state) => {
+      state.value += 1;
+    },
+    decrement: (state) => {
+      state.value -= 1;
+    },
+  },
+});
+
+// Export the reducer and action creators
+export const { increment, decrement } = counterSlice.actions;
+export default counterSlice.reducer;
+
+
+
+
+
+
+
+
+
+
+
+
+import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { increment, decrement } from './path/to/your/counterSlice';
+
+const CounterComponent = () => {
+  // Step 1: Connect to the Redux store
+  const dispatch = useDispatch();
+
+  // Step 2: Access the state from the store
+  const counter = useSelector((state) => state.counter.value); // Assuming 'value' is the key in your counter slice
+
+  return (
+    <div>
+      <h1>Counter: {counter}</h1>
+      {/* Step 3: Dispatch actions to update the state */}
+      <button onClick={() => dispatch(increment())}>Increment</button>
+      <button onClick={() => dispatch(decrement())}>Decrement</button>
+    </div>
+  );
+};
+
+export default CounterComponent;
+
+
+```
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+# Fresh Start
+## the flow of redux configuration
+```javascript
+import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
+
+// creating API slice 
+export const API = createApi({
+  reducerPath: 'jsonServerApi',
+  baseQuery: fetchBaseQuery({ baseUrl: 'https://reqres.in' }),
+  tagTypes: ['product'],
+  endpoints: (builder) => ({
+    // Define your endpoint here
+    getUsers: builder.query({
+      query: () => 'api/users', // Specify the endpoint path
+    }),
+  }),
+});
+
+// Export the generated hook for the endpoint
+export const { useGetUsersQuery } = API;
+
+```
