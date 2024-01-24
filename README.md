@@ -1,3 +1,16 @@
+# Table of content
+1. What is redux?
+
+
+
+<br>
+<br>
+
+# Redux
+* Redux is a global State container
+* Redux is mostly used with React but I can be used with other javascript framework or libraries.
+
+
 # redux-research
 What is a Reducer in Redux?
 
