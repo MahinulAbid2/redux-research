@@ -44,7 +44,25 @@ const [state, setState] = useState({
 <br>
 
 ### How to create store?
+Create this folder named `store`. <br>
+![image](https://github.com/MahinulAbid2/redux-research/assets/70069009/bd58a4a0-26ab-49c8-9206-025898445d07)
+![image](https://github.com/MahinulAbid2/redux-research/assets/70069009/d96d84ba-3bc5-412d-815d-11482510cdd7)
+
+
 ```javascript
+// Note that, I only need to create/configure store once in the entire project. 
+import { configureStore } from '@reduxjs/toolkit' // configureStore is only needed when I want to create a store.
+import signUpReducer from './signUpSlice'; // these are slice created in the same directory.
+import signInReducer from './signInSlice'; // slice contains function to update state and state declaration
+
+export const store = configureStore({
+  reducer: {
+    signUpState: signUpReducer,
+    signInState: signInReducer, 
+  }
+})
+
+setupListeners(store.dispatch)
 
 ```
 
