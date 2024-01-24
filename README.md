@@ -8,8 +8,45 @@
 
 # Redux
 * Redux is a global State container
-* Redux is mostly used with React but I can be used with other javascript framework or libraries.
+* For now, I only researched `redux-toolkit`. The `@reduxjs/toolkit` package wraps around the core redux package, and contains API methods and common dependencies that we think are essential for building a Redux app.
+* How to install `redux toolkit`?
 
+<br>
+<br>
+
+# Environment Introduction
+Install `redux toolkit`
+```console
+npm install @reduxjs/toolkit
+```
+
+<br>
+
+* First Install the package.
+* NEXT STEP: set up store. What do you mean set up store?
+What is store?
+
+<br>
+
+### Store & Slice
+* `STORE` : Store is where all the `global state` is stored. In detail, `store` actually contains `slice`.
+* `slice`: what is slice? Slice contains `function` and `state` declaration. `Functions` - functions that can update state.
+* First I have to set up state. After that I have to create a `slice` that contains state. I can define one state in one slice. But I can declare multiple value in one state like object.
+```jsx
+const [state, setState] = useState({
+    valueOne: 'initial value',
+    valueTwo: 'initial value',
+  });
+// this idea is used in redux alot.
+```
+
+<br>
+<br>
+
+### How to create store?
+```javascript
+
+```
 
 # redux-research
 What is a Reducer in Redux?
