@@ -38,6 +38,27 @@ export const store = configureStore({
 ```
 
 <br>
+
+# One important thing in main.tsx
+```typescript
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import { RouterProvider } from "react-router-dom";
+import router from './routeHandler.tsx';
+import { store } from './store/store.tsx'
+import { Provider } from 'react-redux'  // have to import Provider from redux in implement i
+
+
+ReactDOM.createRoot(document.getElementById('root')!).render(
+  <React.StrictMode>
+    <Provider store={store}>
+      <RouterProvider router={router} />
+    </Provider>
+  </React.StrictMode>,
+)
+```
+
+<br>
 <br>
 
 # Destructing configureStore
@@ -51,6 +72,9 @@ export const store = configureStore({
 ![image](https://github.com/MahinulAbid2/redux-research/assets/70069009/000d4053-dcab-4079-a9e0-0cae44143e58)
 <br>
 ![image](https://github.com/MahinulAbid2/redux-research/assets/70069009/a87e6fc8-9d22-4892-8a11-e8187610e8f0)
+<br>
+![image](https://github.com/MahinulAbid2/redux-research/assets/70069009/c4c3eb39-3993-43bf-b6ff-4de16c3355fa)
+
 
 
 
