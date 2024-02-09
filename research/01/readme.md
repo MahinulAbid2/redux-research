@@ -18,3 +18,21 @@ Now the question is what is
 <br>
 
 ### What is Root State? 
+* `Root` - means <b>Main</b>
+* I think <b>root state</b> is a term used in `redux`.
+* IN GENENRAL, a `state` is limited to the React `individual component`. Means a state cannot be accessed outside of the individual component.
+* Whereas Redux creates a `global state` which can be accessed by every component.
+* The source or `global state` is called rootstate.
+Root state looks something like this:
+```typescript
+mport { configureStore } from '@reduxjs/toolkit'
+// ...
+
+export const store = configureStore({
+  reducer: {
+    posts: postsReducer,
+    comments: commentsReducer,
+    users: usersReducer,
+  },
+})
+```
