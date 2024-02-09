@@ -49,6 +49,11 @@ export const store = configureStore({
 <br>
 
 ![image](https://github.com/MahinulAbid2/redux-research/assets/70069009/000d4053-dcab-4079-a9e0-0cae44143e58)
+<br>
+![image](https://github.com/MahinulAbid2/redux-research/assets/70069009/a87e6fc8-9d22-4892-8a11-e8187610e8f0)
+
+
+
 
 
 
