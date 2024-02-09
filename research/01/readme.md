@@ -36,3 +36,19 @@ export const store = configureStore({
   },
 })
 ```
+
+<br>
+<br>
+
+# Destructing configureStore
+
+<img src="https://github.com/MahinulAbid2/redux-research/assets/70069009/eb529dc5-ac37-437d-b095-48321bf33e67" style="width: 500px">
+<br>
+<img src="https://github.com/MahinulAbid2/redux-research/assets/70069009/620dd2b4-5664-4e5a-ad2f-25de97179459" style="width: 500px">
+
+
+
+
+
+
+
